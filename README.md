@@ -39,7 +39,7 @@ Once the contract is deployed, you can interact with it by calling the requireIn
 
 ## Authors
 
-Tanishq
+Karanveer Mittal
 
 ## License
 
