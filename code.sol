@@ -2,7 +2,7 @@
 pragma solidity 0.8.18;
 
 contract FunctionErrors {
-    function requireC(uint _UPSCAge) 
+    function requireC(uint _upscAge) 
     public pure returns (string memory){
         uint _UPSCAge = 21;
         require(_upscAge >= _UPSCAge, "You doesn't pass eligibility criteria,You are under 21");
