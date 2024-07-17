@@ -35,7 +35,37 @@ To compile the code, click on the "Solidity Compiler" tab in the left-hand sideb
 
 Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the your contract from the dropdown menu, and then click on the "Deploy" button.
 
-Once the contract is deployed, you can interact with it by calling the requireInstance, assertInstance and revertInstance function.
+```SOLIDITY
+
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.18;
+
+contract FunctionErrors {
+    function requireC(uint _UPSCAge) 
+    public pure returns (string memory){
+        uint _UPSCAge = 21;
+        require(_upscAge >= _UPSCAge, "You doesn't pass eligibility criteria,You are under 21");
+        return ("You are eligible to give the exam");
+    }
+    
+    function assertC(uint _userAge) 
+    public pure returns (string memory){
+        uint _LegalAge = 60;
+        assert(_userAge >= _LegalAge);
+        return("You are eligible to get pension");
+    }
+    
+    function revertC(uint _amount) 
+    public pure {
+        uint _Balance = 3000;
+        if (_amount > _Balance) {
+            revert("You didn't have sufficient balance");
+        }
+    }
+}
+```
+
+Once the contract is deployed, you can interact with it by calling the requireC, assertC and revertC function.
 
 ## Authors
 
